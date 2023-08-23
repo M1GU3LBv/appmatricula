@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="Escuelas_array">
+        <item>Ingenieria y Arquitectura</item>
+        <item>Nutricion</item>
+        <item>Salud</item>
+
+
+
+    </string-array>
+    <string-array name="Cuotas_array" >
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+    <string-array name="Carrera_array">
+
+
+        <item>Ingenieria de Sistemas</item>
+        <item>Ingenieria Civil</item>
+        <item>Psicologia</item>
+        <item>Enfermeria</item>
+        <item>Nutricion</item>
+
+
+
+    </string-array>
+</resources>
