@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
     tools:context=".MainActivity"
+    android:padding="16dp"
     tools:layout_editor_absoluteX="-19dp"
     tools:layout_editor_absoluteY="0dp">
 
@@ -16,16 +16,17 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="61dp"
         android:text="Nombre del Alumno"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="16dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/textViewName"
-        app:layout_constraintTop_toBottomOf="@+id/textViewName"
-        tools:layout_editor_absoluteX="16dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewName" />
 
     <TextView
         android:id="@+id/textViewEscuela"
@@ -143,6 +144,7 @@
         android:text="Total"
         app:layout_constraintTop_toBottomOf="@+id/textViewGastosAdicionales"
         tools:layout_editor_absoluteX="-3dp" />
+
     <TextView
         android:id="@+id/textViewTotal"
         android:layout_width="match_parent"
