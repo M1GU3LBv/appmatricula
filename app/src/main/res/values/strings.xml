@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AppMatricula</string>
+    <string name="page_title">Matricula App</string>
 </resources>

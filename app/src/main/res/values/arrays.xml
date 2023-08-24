@@ -3,8 +3,8 @@
 
     <string-array name="Escuelas_array">
         <item>Ingenieria y Arquitectura</item>
-        <item>Nutricion</item>
         <item>Salud</item>
+        <item>Ciencias Humanas y Educacion </item>
 
 
 
@@ -15,18 +15,17 @@
         <item>3</item>
         <item>4</item>
         <item>5</item>
-        <item>6</item>
     </string-array>
-    <string-array name="Carrera_array">
-
-
-        <item>Ingenieria de Sistemas</item>
-        <item>Ingenieria Civil</item>
-        <item>Psicologia</item>
-        <item>Enfermeria</item>
-        <item>Nutricion</item>
-
-
-
+    <string-array name="GastosAdicionales_array">
+        <item>Carnet Biblioteca</item>
+        <item>Carnet Medio Pasaje</item>
     </string-array>
+
+<!--    <string-array name="Carrera_array">-->
+<!--        <item>Ingenieria de Sistemas</item>-->
+<!--        <item>Ingenieria Civil</item>-->
+<!--        <item>Psicologia</item>-->
+<!--        <item>Enfermeria</item>-->
+<!--        <item>Nutricion</item>-->
+<!--    </string-array>-->
 </resources>

@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -96,9 +102,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="S/."
         app:layout_constraintTop_toBottomOf="@+id/textViewCostoCarreraTitle"
         tools:layout_editor_absoluteX="-3dp" />
+    <TextView
+            android:id="@+id/textViewCostoCarreraSign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="S/."
+            app:layout_constraintTop_toBottomOf="@+id/textViewCostoCarreraTitle"
+            tools:layout_editor_absoluteX="-3dp" />
 
     <TextView
         android:id="@+id/textViewPensionTitle"
@@ -117,6 +130,14 @@
         android:text="S/."
         app:layout_constraintTop_toBottomOf="@+id/textViewPensionTitle"
         tools:layout_editor_absoluteX="-3dp" />
+    <TextView
+            android:id="@+id/textViewPensionSign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="S/."
+            app:layout_constraintTop_toBottomOf="@+id/textViewPensionTitle"
+            tools:layout_editor_absoluteX="-3dp" />
 
     <TextView
         android:id="@+id/textViewGastosAdicionalesTitle"
@@ -126,15 +147,31 @@
         android:text="Gastos Adicionales"
         app:layout_constraintTop_toBottomOf="@+id/textViewPension"
         tools:layout_editor_absoluteX="14dp" />
+    <Spinner
+            android:id="@+id/spinnerGastosAdicionales"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textViewGastosAdicionalesTitle"
+            tools:layout_editor_absoluteX="-1dp" />
+
 
     <TextView
         android:id="@+id/textViewGastosAdicionales"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="S/."
-        app:layout_constraintTop_toBottomOf="@+id/textViewGastosAdicionalesTitle"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerGastosAdicionales"
         tools:layout_editor_absoluteX="-3dp" />
+    <TextView
+            android:id="@+id/textViewGastosAdicionalesSign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="S/."
+            app:layout_constraintTop_toBottomOf="@+id/spinnerGastosAdicionales"
+            tools:layout_editor_absoluteX="-3dp" />
 
     <TextView
         android:id="@+id/textViewTotalTitle"
@@ -150,22 +187,39 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="S/."
         app:layout_constraintTop_toBottomOf="@+id/textViewTotalTitle"
         tools:layout_editor_absoluteX="-3dp" />
+    <TextView
+            android:id="@+id/textViewTotalSign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="S/."
+            app:layout_constraintTop_toBottomOf="@+id/textViewTotalTitle"
+            tools:layout_editor_absoluteX="-3dp" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="156dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="156dp"
-        android:text="Aceptar"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTotal" />
+            android:id="@+id/calcular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:text="Calcular"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTotal"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="73dp"/>
+
+    <Button
+            android:id="@+id/imprimir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="96dp"
+            android:text="Imprimir"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTotal"
+            />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
