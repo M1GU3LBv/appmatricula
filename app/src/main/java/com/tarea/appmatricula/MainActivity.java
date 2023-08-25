@@ -1,5 +1,6 @@
 package com.tarea.appmatricula;
 
+import android.content.Intent;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         Spinner spinnerOptions = findViewById(R.id.spinnerEscuela);
 
         Button buttonCalculate = findViewById(R.id.calcular);
+        Button buttonImprimir = findViewById(R.id.imprimir);
         TextView textViewCarrera = findViewById(R.id.textViewCostoCarrera);
         TextView textViewPension = findViewById(R.id.textViewPension);
         TextView textViewTotal = findViewById(R.id.textViewTotal);
@@ -239,10 +241,6 @@ public class MainActivity extends AppCompatActivity {
         buttonCalculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Aquí implementa la lógica de cálculo y actualización de los resultados
-                // Puedes usar editTextName.getText().toString() para obtener el valor del campo de nombre
-                // Actualiza textViewResults con los resultados calculados
-
                 String cuotas = spinnerCuotas.getSelectedItem().toString();
                 String gastosAdicionales = textViewGastosAdicionales.getText().toString();
                 Double gastostemp = Double.parseDouble(gastosAdicionales);
@@ -265,6 +263,20 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        buttonImprimir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
+              startActivity(intent);
+
+
+
+            }
+        });
+
+
+
 
 
     }
