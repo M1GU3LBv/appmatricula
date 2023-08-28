@@ -2,9 +2,12 @@ package com.tarea.appmatricula;
 
 import android.content.Intent;
 import android.widget.*;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.os.Bundle;
+import androidx.appcompat.widget.Toolbar;
+
 import java.util.ArrayList;
 
 
@@ -17,8 +20,13 @@ public class MainActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        androidx.appcompat.widget.Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setHomeAsUpIndicator(R.drawable.baseline_more_vert_24);
+        actionBar.setDisplayHomeAsUpEnabled(true);
         Spinner spinnerOptions = findViewById(R.id.spinnerEscuela);
-
+        TextView textViewNombre = findViewById(R.id.editTextName);
         Button buttonCalculate = findViewById(R.id.calcular);
         Button buttonImprimir = findViewById(R.id.imprimir);
         TextView textViewCarrera = findViewById(R.id.textViewCostoCarrera);
@@ -267,7 +275,26 @@ public class MainActivity extends AppCompatActivity {
         buttonImprimir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
+
+                String nombre = textViewNombre.getText().toString();
+                String escuela = spinnerEscuela.getSelectedItem().toString();
+                String carrera = spinnerCarrera.getSelectedItem().toString();
+                String cuotas = spinnerCuotas.getSelectedItem().toString();
+                String costoCarrera = textViewCarrera.getText().toString();
+                String gastosAdicionales = textViewGastosAdicionales.getText().toString();
+                String total = textViewTotal.getText().toString();
+
                 Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
+                intent.putExtra("nombre", nombre);
+                intent.putExtra("escuela", escuela);
+                intent.putExtra("carrera", carrera);
+                intent.putExtra("cuotas", cuotas);
+                intent.putExtra("costoCarrera", costoCarrera);
+                intent.putExtra("gastosAdicionales", gastosAdicionales);
+                intent.putExtra("total", total);
+
               startActivity(intent);
 
 
